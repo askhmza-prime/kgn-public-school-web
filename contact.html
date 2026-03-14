@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Contact – K.G.N. Public School Moradabad</title>
+<link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+<nav><div class="nav-inner"><div class="nav-logo"><div class="logo-icon">KGN</div><div class="logo-text"><h3>K.G.N. Public School</h3><p>Moradabad, Uttar Pradesh</p></div></div><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="academics.html">Academics</a></li><li><a href="faculty.html">Faculty</a></li><li><a href="notice.html">Notice Board</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="admissions.html" class="nav-admit">Admissions</a></li><li><a href="contact.html" class="active">Contact</a></li></ul><div class="hamburger" onclick="toggleMob()"><span></span><span></span><span></span></div></div></nav>
+<div class="mob-nav" id="mobNav"><button class="mob-close" onclick="toggleMob()">✕</button><a href="index.html" onclick="toggleMob()">Home</a><a href="about.html" onclick="toggleMob()">About</a><a href="academics.html" onclick="toggleMob()">Academics</a><a href="faculty.html" onclick="toggleMob()">Faculty</a><a href="notice.html" onclick="toggleMob()">Notice Board</a><a href="gallery.html" onclick="toggleMob()">Gallery</a><a href="admissions.html" onclick="toggleMob()">Admissions</a><a href="contact.html" onclick="toggleMob()">Contact</a></div>
+
+<div class="page-header">
+  <div class="breadcrumb"><a href="index.html">Home</a><span>›</span><span class="current">Contact</span></div>
+  <h1>Contact Us</h1>
+  <p>We'd love to hear from you — reach out anytime</p>
+</div>
+
+<section class="section">
+  <div class="section-inner">
+    <div class="cards-grid-2">
+      <!-- CONTACT INFO -->
+      <div class="reveal">
+        <div class="section-label">Get In Touch</div>
+        <h2 class="section-title">We're Here to <span>Help</span></h2>
+        <p style="color:var(--gray);font-size:0.9rem;line-height:1.7;margin-bottom:28px">Have questions about admissions, school timings, or anything else? Contact us directly or fill the form and we'll get back to you soon.</p>
+        <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:28px">
+          <div style="display:flex;align-items:center;gap:14px;padding:16px;background:var(--blue-light);border-radius:12px">
+            <div style="width:44px;height:44px;border-radius:10px;background:var(--blue);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0">📍</div>
+            <div><div style="font-size:0.75rem;color:var(--gray);font-weight:600;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:3px">Address</div><div style="font-size:0.9rem;font-weight:600">Moradabad City, Moradabad</div><div style="font-size:0.8rem;color:var(--gray)">Uttar Pradesh, India</div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;padding:16px;background:var(--blue-light);border-radius:12px">
+            <div style="width:44px;height:44px;border-radius:10px;background:var(--blue);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0">📞</div>
+            <div><div style="font-size:0.75rem;color:var(--gray);font-weight:600;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:3px">Phone</div><div style="font-size:0.9rem;font-weight:600">Contact School Office</div><div style="font-size:0.8rem;color:var(--gray)">Mon–Sat, 8 AM – 2 PM</div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;padding:16px;background:var(--blue-light);border-radius:12px">
+            <div style="width:44px;height:44px;border-radius:10px;background:var(--blue);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0">🕐</div>
+            <div><div style="font-size:0.75rem;color:var(--gray);font-weight:600;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:3px">Working Hours</div><div style="font-size:0.9rem;font-weight:600">Monday to Saturday</div><div style="font-size:0.8rem;color:var(--gray)">8:00 AM – 2:00 PM</div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;padding:16px;background:var(--blue-light);border-radius:12px">
+            <div style="width:44px;height:44px;border-radius:10px;background:var(--blue);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0">🏫</div>
+            <div><div style="font-size:0.75rem;color:var(--gray);font-weight:600;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:3px">UDISE Code</div><div style="font-size:0.9rem;font-weight:600">9041500184</div><div style="font-size:0.8rem;color:var(--gray)">Registered with UP Government</div></div>
+          </div>
+        </div>
+        <a href="admissions.html" class="btn-blue">Apply for Admission →</a>
+      </div>
+
+      <!-- CONTACT FORM -->
+      <div class="card reveal">
+        <h3 style="font-size:1.1rem;color:var(--blue);margin-bottom:6px">Send us a Message</h3>
+        <p style="font-size:0.8rem;color:var(--gray);margin-bottom:20px">Fill the form and we'll respond as soon as possible.</p>
+        <form id="contactForm">
+          <div class="form-row">
+            <div class="form-group"><label>Your Name *</label><input type="text" placeholder="Full name" required/></div>
+            <div class="form-group"><label>Mobile Number *</label><input type="tel" placeholder="10-digit" maxlength="10" required/></div>
+          </div>
+          <div class="form-group"><label>Subject *</label><select required><option value="">Select subject</option><option>Admission Enquiry</option><option>Fee Information</option><option>School Timing</option><option>Documents Required</option><option>Other</option></select></div>
+          <div class="form-group"><label>Message *</label><textarea placeholder="Your message..." required></textarea></div>
+          <button type="submit" class="btn-blue" style="width:100%;justify-content:center">Send Message →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<section class="section section-alt">
+  <div class="section-inner">
+    <div class="section-label reveal" style="justify-content:center">Find Us</div>
+    <h2 class="section-title reveal" style="text-align:center">School <span>Location</span></h2>
+    <div style="border-radius:16px;overflow:hidden;border:2px solid var(--border);" class="reveal">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55841.24891919!2d78.72406!3d28.83893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390af4c5a8a71f5d%3A0x80b1f9e9b1c1b1b1!2sMoradabad%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1" width="100%" height="350" style="border:0;display:block" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer><div class="footer-inner"><div class="footer-grid"><div class="footer-brand"><div style="display:flex;align-items:center;gap:10px;margin-bottom:8px"><div style="width:40px;height:40px;border-radius:10px;background:var(--blue);display:flex;align-items:center;justify-content:center;font-family:'Baloo 2',sans-serif;font-weight:800;color:white;font-size:0.9rem">KGN</div><span style="font-family:'Baloo 2',sans-serif;font-weight:800;font-size:1rem">K.G.N. Public School</span></div><p>Quality education in Moradabad since 2006.</p></div><div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="academics.html">Academics</a></li><li><a href="admissions.html">Admissions</a></li></ul></div><div class="footer-col"><h4>More</h4><ul><li><a href="faculty.html">Faculty</a></li><li><a href="notice.html">Notices</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></div><div class="footer-col"><h4>Info</h4><ul><li><a href="#">📍 Moradabad, UP</a></li><li><a href="#">UP State Board</a></li><li><a href="#">Est. 2006</a></li></ul></div></div><div class="footer-bottom"><p>© 2025 K.G.N. Public School, Moradabad. All Rights Reserved.</p><p>UDISE: <span>9041500184</span> | Developed by <span>HMZA Digital</span></p></div></div></footer>
+<a href="https://wa.me/91" class="wa-float">💬</a>
+<script src="js/script.js"></script>
+</body>
+</html>
