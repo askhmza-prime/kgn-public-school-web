@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Gallery – K.G.N. Public School Moradabad</title>
+<link rel="stylesheet" href="css/styles.css"/>
+<style>
+.gallery-item .placeholder { background: var(--blue-light); border-radius: 12px; }
+.g1 { background: linear-gradient(135deg,#e8f0fb,#c3d9f5) !important; }
+.g2 { background: linear-gradient(135deg,#e8f7ee,#c3e8d0) !important; }
+.g3 { background: linear-gradient(135deg,#fef3e8,#fdd8a0) !important; }
+.g4 { background: linear-gradient(135deg,#f3e8ff,#d8b4fe) !important; }
+.g5 { background: linear-gradient(135deg,#ffe8e8,#fca5a5) !important; }
+.g6 { background: linear-gradient(135deg,#e8fbfb,#a0e0e8) !important; }
+</style>
+</head>
+<body>
+<nav><div class="nav-inner"><div class="nav-logo"><div class="logo-icon">KGN</div><div class="logo-text"><h3>K.G.N. Public School</h3><p>Moradabad, Uttar Pradesh</p></div></div><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="academics.html">Academics</a></li><li><a href="faculty.html">Faculty</a></li><li><a href="notice.html">Notice Board</a></li><li><a href="gallery.html" class="active">Gallery</a></li><li><a href="admissions.html" class="nav-admit">Admissions</a></li><li><a href="contact.html">Contact</a></li></ul><div class="hamburger" onclick="toggleMob()"><span></span><span></span><span></span></div></div></nav>
+<div class="mob-nav" id="mobNav"><button class="mob-close" onclick="toggleMob()">✕</button><a href="index.html" onclick="toggleMob()">Home</a><a href="about.html" onclick="toggleMob()">About</a><a href="academics.html" onclick="toggleMob()">Academics</a><a href="faculty.html" onclick="toggleMob()">Faculty</a><a href="notice.html" onclick="toggleMob()">Notice Board</a><a href="gallery.html" onclick="toggleMob()">Gallery</a><a href="admissions.html" onclick="toggleMob()">Admissions</a><a href="contact.html" onclick="toggleMob()">Contact</a></div>
+
+<div class="page-header">
+  <div class="breadcrumb"><a href="index.html">Home</a><span>›</span><span class="current">Gallery</span></div>
+  <h1>School Gallery</h1>
+  <p>Moments and memories from K.G.N. Public School</p>
+</div>
+
+<section class="section">
+  <div class="section-inner">
+    <div style="display:flex;gap:10px;margin-bottom:28px;flex-wrap:wrap;" class="reveal">
+      <button onclick="filterGallery('all',this)" style="padding:8px 18px;border-radius:20px;border:1px solid var(--blue);background:var(--blue);color:white;font-size:0.82rem;font-weight:600;cursor:pointer;font-family:'Hind',sans-serif">All</button>
+      <button onclick="filterGallery('event',this)" style="padding:8px 18px;border-radius:20px;border:1px solid var(--border);background:transparent;color:var(--gray);font-size:0.82rem;font-weight:600;cursor:pointer;font-family:'Hind',sans-serif">Events</button>
+      <button onclick="filterGallery('sports',this)" style="padding:8px 18px;border-radius:20px;border:1px solid var(--border);background:transparent;color:var(--gray);font-size:0.82rem;font-weight:600;cursor:pointer;font-family:'Hind',sans-serif">Sports</button>
+      <button onclick="filterGallery('campus',this)" style="padding:8px 18px;border-radius:20px;border:1px solid var(--border);background:transparent;color:var(--gray);font-size:0.82rem;font-weight:600;cursor:pointer;font-family:'Hind',sans-serif">Campus</button>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid">
+      <div class="gallery-item reveal" data-cat="event"><div class="placeholder g1"><div>🎉</div><p style="font-size:0.78rem;font-weight:600;color:var(--blue)">Annual Function</p></div></div>
+      <div class="gallery-item reveal" data-cat="sports"><div class="placeholder g2"><div>⚽</div><p style="font-size:0.78rem;font-weight:600;color:var(--green)">Sports Day</p></div></div>
+      <div class="gallery-item reveal" data-cat="campus"><div class="placeholder g3"><div>🏫</div><p style="font-size:0.78rem;font-weight:600;color:#e67e22">School Building</p></div></div>
+      <div class="gallery-item reveal" data-cat="event"><div class="placeholder g4"><div>🇮🇳</div><p style="font-size:0.78rem;font-weight:600;color:#9b59b6">Republic Day</p></div></div>
+      <div class="gallery-item reveal" data-cat="sports"><div class="placeholder g5"><div>🏃</div><p style="font-size:0.78rem;font-weight:600;color:#e74c3c">Race Competition</p></div></div>
+      <div class="gallery-item reveal" data-cat="campus"><div class="placeholder g6"><div>🌿</div><p style="font-size:0.78rem;font-weight:600;color:#1abc9c">Playground</p></div></div>
+      <div class="gallery-item reveal" data-cat="event"><div class="placeholder g1"><div>🎨</div><p style="font-size:0.78rem;font-weight:600;color:var(--blue)">Art Exhibition</p></div></div>
+      <div class="gallery-item reveal" data-cat="event"><div class="placeholder g2"><div>🎓</div><p style="font-size:0.78rem;font-weight:600;color:var(--green)">Prize Distribution</p></div></div>
+      <div class="gallery-item reveal" data-cat="campus"><div class="placeholder g3"><div>📚</div><p style="font-size:0.78rem;font-weight:600;color:#e67e22">Classroom</p></div></div>
+    </div>
+    <p style="text-align:center;color:var(--gray);font-size:0.83rem;margin-top:20px;font-style:italic" class="reveal">📸 More photos will be added soon. Stay connected!</p>
+  </div>
+</section>
+
+<footer><div class="footer-inner"><div class="footer-grid"><div class="footer-brand"><div style="display:flex;align-items:center;gap:10px;margin-bottom:8px"><div style="width:40px;height:40px;border-radius:10px;background:var(--blue);display:flex;align-items:center;justify-content:center;font-family:'Baloo 2',sans-serif;font-weight:800;color:white;font-size:0.9rem">KGN</div><span style="font-family:'Baloo 2',sans-serif;font-weight:800;font-size:1rem">K.G.N. Public School</span></div><p>Quality education in Moradabad since 2006.</p></div><div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="academics.html">Academics</a></li><li><a href="admissions.html">Admissions</a></li></ul></div><div class="footer-col"><h4>More</h4><ul><li><a href="faculty.html">Faculty</a></li><li><a href="notice.html">Notices</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></div><div class="footer-col"><h4>Info</h4><ul><li><a href="#">📍 Moradabad, UP</a></li></ul></div></div><div class="footer-bottom"><p>© 2025 K.G.N. Public School. All Rights Reserved.</p><p>Built with ❤️ by <span>HMZA Digital</span></p></div></div></footer>
+<a href="https://wa.me/91" class="wa-float">💬</a>
+<script src="js/script.js"></script>
+<script>
+function filterGallery(cat, btn) {
+  document.querySelectorAll('#galleryGrid .gallery-item').forEach(c => {
+    c.style.display = (cat === 'all' || c.dataset.cat === cat) ? 'block' : 'none';
+  });
+  document.querySelectorAll('[onclick^="filterGallery"]').forEach(b => {
+    b.style.background = 'transparent'; b.style.color = 'var(--gray)'; b.style.borderColor = 'var(--border)';
+  });
+  btn.style.background = 'var(--blue)'; btn.style.color = 'white'; btn.style.borderColor = 'var(--blue)';
+}
+</script>
+</body>
+</html>

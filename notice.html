@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Notice Board – K.G.N. Public School Moradabad</title>
+<link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+<nav><div class="nav-inner"><div class="nav-logo"><div class="logo-icon">KGN</div><div class="logo-text"><h3>K.G.N. Public School</h3><p>Moradabad, Uttar Pradesh</p></div></div><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="academics.html">Academics</a></li><li><a href="faculty.html">Faculty</a></li><li><a href="notice.html" class="active">Notice Board</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="admissions.html" class="nav-admit">Admissions</a></li><li><a href="contact.html">Contact</a></li></ul><div class="hamburger" onclick="toggleMob()"><span></span><span></span><span></span></div></div></nav>
+<div class="mob-nav" id="mobNav"><button class="mob-close" onclick="toggleMob()">✕</button><a href="index.html" onclick="toggleMob()">Home</a><a href="about.html" onclick="toggleMob()">About</a><a href="academics.html" onclick="toggleMob()">Academics</a><a href="faculty.html" onclick="toggleMob()">Faculty</a><a href="notice.html" onclick="toggleMob()">Notice Board</a><a href="gallery.html" onclick="toggleMob()">Gallery</a><a href="admissions.html" onclick="toggleMob()">Admissions</a><a href="contact.html" onclick="toggleMob()">Contact</a></div>
+
+<div class="page-header">
+  <div class="breadcrumb"><a href="index.html">Home</a><span>›</span><span class="current">Notice Board</span></div>
+  <h1>Notice Board</h1>
+  <p>Important announcements and updates for students and parents</p>
+</div>
+
+<section class="section">
+  <div class="section-inner">
+    <!-- FILTER -->
+    <div style="display:flex;gap:10px;margin-bottom:28px;flex-wrap:wrap;" class="reveal">
+      <button onclick="filterNotice('all',this)" style="padding:8px 18px;border-radius:20px;border:1px solid var(--blue);background:var(--blue);color:white;font-size:0.82rem;font-weight:600;cursor:pointer;font-family:'Hind',sans-serif">All</button>
+      <button onclick="filterNotice('admission',this)" style="padding:8px 18px;border-radius:20px;border:1px solid var(--border);background:transparent;color:var(--gray);font-size:0.82rem;font-weight:600;cursor:pointer;font-family:'Hind',sans-serif">Admission</button>
+      <button onclick="filterNotice('exam',this)" style="padding:8px 18px;border-radius:20px;border:1px solid var(--border);background:transparent;color:var(--gray);font-size:0.82rem;font-weight:600;cursor:pointer;font-family:'Hind',sans-serif">Exam</button>
+      <button onclick="filterNotice('holiday',this)" style="padding:8px 18px;border-radius:20px;border:1px solid var(--border);background:transparent;color:var(--gray);font-size:0.82rem;font-weight:600;cursor:pointer;font-family:'Hind',sans-serif">Holiday</button>
+      <button onclick="filterNotice('event',this)" style="padding:8px 18px;border-radius:20px;border:1px solid var(--border);background:transparent;color:var(--gray);font-size:0.82rem;font-weight:600;cursor:pointer;font-family:'Hind',sans-serif">Event</button>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:14px;" id="noticeList">
+      <div class="notice-card reveal" data-cat="admission">
+        <div class="n-icon blue">📢</div>
+        <div class="n-content">
+          <h4>Admissions Open — Session 2025–26</h4>
+          <p>Admissions are now open for Classes 1 to 8 for the upcoming academic session 2025–26. Parents are requested to contact the school office during working hours. Limited seats available.</p>
+          <div class="n-date">📅 March 2025 · Admission</div>
+        </div>
+      </div>
+      <div class="notice-card exam reveal" data-cat="exam">
+        <div class="n-icon green">📝</div>
+        <div class="n-content">
+          <h4>Annual Examination Schedule — 2024–25</h4>
+          <p>Annual examinations for all classes (1 to 8) will be conducted as per the schedule. Students are advised to start preparation well in advance. Admit cards will be distributed by class teachers.</p>
+          <div class="n-date">📅 February 2025 · Exam</div>
+        </div>
+      </div>
+      <div class="notice-card urgent reveal" data-cat="holiday">
+        <div class="n-icon red">🏖️</div>
+        <div class="n-content">
+          <h4>Summer Vacation Notice 2025</h4>
+          <p>School will remain closed for summer vacations. The exact dates will be announced shortly. New session 2025–26 will begin in April. Parents are requested to note the dates.</p>
+          <div class="n-date">📅 April 2025 · Holiday</div>
+        </div>
+      </div>
+      <div class="notice-card reveal" data-cat="event">
+        <div class="n-icon blue">🎉</div>
+        <div class="n-content">
+          <h4>Annual Sports Day Celebration</h4>
+          <p>Annual Sports Day will be celebrated in the school playground. All students are encouraged to participate in various sports events. Parents are cordially invited to attend.</p>
+          <div class="n-date">📅 January 2025 · Event</div>
+        </div>
+      </div>
+      <div class="notice-card reveal" data-cat="holiday">
+        <div class="n-icon red">🕌</div>
+        <div class="n-content">
+          <h4>Public Holiday — Eid-ul-Fitr</h4>
+          <p>School will remain closed on the occasion of Eid-ul-Fitr. Classes will resume on the next working day. Eid Mubarak to all students and their families.</p>
+          <div class="n-date">📅 March 2025 · Holiday</div>
+        </div>
+      </div>
+      <div class="notice-card exam reveal" data-cat="exam">
+        <div class="n-icon green">📊</div>
+        <div class="n-content">
+          <h4>Half-Yearly Exam Results Declared</h4>
+          <p>Half-yearly examination results have been declared. Report cards will be distributed to students. Parents are requested to collect report cards from school office.</p>
+          <div class="n-date">📅 December 2024 · Exam</div>
+        </div>
+      </div>
+      <div class="notice-card reveal" data-cat="event">
+        <div class="n-icon blue">🇮🇳</div>
+        <div class="n-content">
+          <h4>Republic Day Celebration</h4>
+          <p>Republic Day will be celebrated with great enthusiasm. Flag hoisting ceremony will be held in the school premises. All students and staff are requested to be present.</p>
+          <div class="n-date">📅 January 2025 · Event</div>
+        </div>
+      </div>
+      <div class="notice-card reveal" data-cat="admission">
+        <div class="n-icon blue">📋</div>
+        <div class="n-content">
+          <h4>Documents Required for New Admission</h4>
+          <p>Parents applying for new admissions must bring: Birth Certificate, Aadhar Card, Previous class marksheet/TC, 4 passport size photographs, and Residence proof.</p>
+          <div class="n-date">📅 March 2025 · Admission</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="footer-inner"><div class="footer-grid"><div class="footer-brand"><div style="display:flex;align-items:center;gap:10px;margin-bottom:8px"><div style="width:40px;height:40px;border-radius:10px;background:var(--blue);display:flex;align-items:center;justify-content:center;font-family:'Baloo 2',sans-serif;font-weight:800;color:white;font-size:0.9rem">KGN</div><span style="font-family:'Baloo 2',sans-serif;font-weight:800;font-size:1rem">K.G.N. Public School</span></div><p>Quality education in Moradabad since 2006.</p></div><div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="academics.html">Academics</a></li><li><a href="admissions.html">Admissions</a></li></ul></div><div class="footer-col"><h4>More</h4><ul><li><a href="faculty.html">Faculty</a></li><li><a href="notice.html">Notices</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></div><div class="footer-col"><h4>Info</h4><ul><li><a href="#">📍 Moradabad, UP</a></li><li><a href="#">UP State Board</a></li></ul></div></div><div class="footer-bottom"><p>© 2025 K.G.N. Public School. All Rights Reserved.</p><p>Built with ❤️ by <span>HMZA Digital</span></p></div></div></footer>
+<a href="https://wa.me/91" class="wa-float">💬</a>
+<script src="js/script.js"></script>
+<script>
+function filterNotice(cat, btn) {
+  document.querySelectorAll('#noticeList .notice-card').forEach(c => {
+    c.style.display = (cat === 'all' || c.dataset.cat === cat) ? 'flex' : 'none';
+  });
+  document.querySelectorAll('[onclick^="filterNotice"]').forEach(b => {
+    b.style.background = 'transparent'; b.style.color = 'var(--gray)'; b.style.borderColor = 'var(--border)';
+  });
+  btn.style.background = 'var(--blue)'; btn.style.color = 'white'; btn.style.borderColor = 'var(--blue)';
+}
+</script>
+</body>
+</html>
